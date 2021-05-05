@@ -1,0 +1,30 @@
+VERSION 1.0 CLASS
+BEGIN
+  MultiUse = -1  'True
+END
+Attribute VB_Name = "Sheet1"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+'#################################################
+'シートモジュール
+'#################################################
+Option Explicit
+
+
+'自分自身はSheet1
+Private Sub SheetCopy()
+    Debug.Print Me.Name
+    Copy Me
+End Sub
+
+'これでも動く(省略されているのはSheet1)
+Private Sub SheetCopy2()
+    Debug.Print Name
+End Sub
+
+'記述対象によって処理が異なる
+'Meキーワードは、シートモジュールやブックモジュール等のオブジェクトモジュールでないと使えない
+
+
